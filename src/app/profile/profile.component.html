@@ -1,0 +1,45 @@
+<div class="profile-container">
+  <mat-drawer-container autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="over" position="end">
+      <mat-list role="list">
+        <mat-list-item role="listitem">Home</mat-list-item>
+        <mat-list-item role="listitem">Abut</mat-list-item>
+        <mat-list-item role="listitem">Portfolio</mat-list-item>
+        <mat-list-item role="listitem">Contact me</mat-list-item>
+      </mat-list>
+    </mat-drawer>
+
+    <div class="main-section">
+      <mat-toolbar color="primary" class="custom-navbar">
+        <mat-toolbar-row>
+          <span>Malvi</span>
+          <span class="example-spacer"></span>
+          <span class="example-icon show-menu-icon" (click)="drawer.toggle()"
+            ><mat-icon>menu</mat-icon></span
+          >
+          <div class="hide-menu-items">
+            <span class="example-icon">Home</span>
+            <span class="example-icon">Abut</span>
+            <span class="example-icon">Portfolio</span>
+            <span class="example-icon">Contact me</span>
+          </div>
+        </mat-toolbar-row>
+      </mat-toolbar>
+
+      <div class="header">
+        <div class="overlay"></div>
+        <div class="header-content container">
+          <h1 class="header-title">
+            <span class="up">HI!</span>
+            <span class="down">I am Malvi</span>
+          </h1>
+          <p class="header-subtitle">WEB DEVELOPER</p>
+
+          <button class="btn btn-primary">Visit My Works</button>
+        </div>
+      </div>
+    </div>
+  </mat-drawer-container>
+
+  <div class="footer"></div>
+</div>
