@@ -16,4 +16,21 @@ export class ProfileComponent {
   events: string[] = [];
   opened: boolean = false;
   showFiller = false;
+  menuList: any[] = [
+    {
+      name: 'Home'
+    },
+    {
+      name: 'About'
+    },
+    {
+      name: 'Services'
+    },
+    {
+      name: 'Portfolio'
+    },
+    {
+      name: 'Contact me'
+    }
+  ]
 }

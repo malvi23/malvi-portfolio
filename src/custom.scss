@@ -1,5 +1,5 @@
-@import '~@angular/material/core/theming';
-@import '~@angular/material/core/typography';
+@import '../node_modules/@angular/material/core/theming/theming.scss';
+@import '../node_modules/@angular/material/core/typography/typography.scss';
 
 // Override the typography options
 $custom-typography: mat-typography-config(
