@@ -1,4 +1,10 @@
 @import '../profile.component.scss';
+@import '../../../styles.scss';
+
+.logo {
+    cursor: pointer;
+    font-weight: bold
+}
 
 .transparent-navbar {
     .mat-toolbar.mat-primary {
@@ -10,5 +16,9 @@
     .mat-toolbar.mat-primary {
         background: white !important;
         color: #6c757d !important;
+    }
+
+    .logo {
+        color: $theme-color;
     }
 }

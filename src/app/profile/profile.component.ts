@@ -48,7 +48,7 @@ export class ProfileComponent {
 
   sectionMap: { [key: string]: ElementRef } = {};
 
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     this.sectionMap = {
       home: this.home,
       about: this.about,
@@ -56,7 +56,6 @@ export class ProfileComponent {
       portfolio: this.portfolio,
       contact: this.contact,
     };
-
   }
   closeSideNav() {
     this.drawer.close();
@@ -64,7 +63,18 @@ export class ProfileComponent {
 
   scrollToDiv(section: string): void {
     const targetElement = this.sectionMap[section];
-    targetElement.nativeElement.scrollIntoView({ behavior: 'smooth' });
-    this.closeSideNav()
+    const margin = 20;
+    const topOffset =
+      targetElement.nativeElement.getBoundingClientRect().top +
+      window.pageYOffset -
+      margin;
+
+    window.scrollTo({ top: topOffset, behavior: 'smooth' });
+
+    // targetElement.nativeElement.scrollIntoView({
+    //   top: topOffset,
+    //   behavior: 'smooth',
+    // });
+    this.closeSideNav();
   }
 }

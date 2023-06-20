@@ -39,7 +39,7 @@
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    background-image: url(../../assets/imgs/header.jpg);
+    background-image: url(../../assets/imgs/background2.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -216,6 +216,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 13px 0;
 }
 
 .container {
