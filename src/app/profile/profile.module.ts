@@ -23,7 +23,7 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     CommonModule,
     ProfileRoutingModule,
-    MaterialModule
+    MaterialModule,
   ]
 })
 export class ProfileModule { }
