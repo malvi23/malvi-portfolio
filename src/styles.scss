@@ -10,23 +10,31 @@ body {
     height: 100%;
 }
 
-*, p, h2, h1 {
+*,
+p,
+h2,
+h1 {
     // font-family: 'Poppins', sans-serif;
     font-family: 'Rubik', sans-serif;
 }
 
 $theme-color: darkslateblue;
 
+.material-icons {
+    font-family: 'Material Icons' !important;
+}
+
 .profile-container {
     .mdc-list-item__primary-text {
         font-family: 'Rubik', sans-serif;
         color: white !important;
     }
+
     .mat-mdc-raised-button {
         border-radius: 9px;
     }
 
-    .mat-toolbar.mat-primary{
+    .mat-toolbar.mat-primary {
         background: transparent !important;
     }
 }
