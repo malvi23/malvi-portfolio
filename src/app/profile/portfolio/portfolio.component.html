@@ -6,7 +6,7 @@
     </div>
     <mat-grid-list cols="3" rowHeight="1:1"  gutterSize="2em">
       <mat-grid-tile *ngFor="let project of projects">
-        <a href="#" class="portfolio-card">
+        <a  class="portfolio-card" (click)="openDialog(project)" >
             <img [src]="project.imgUrl" class="portfolio-card-img" alt="..." />
             <span class="portfolio-card-overlay">
               <span class="portfolio-card-caption">
