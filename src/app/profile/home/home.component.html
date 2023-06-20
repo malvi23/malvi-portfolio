@@ -1,13 +1,13 @@
-<div class="main-section">
+<div class="main-section {{navbarClass}}">
     <mat-toolbar color="primary" class="custom-navbar">
       <mat-toolbar-row>
-        <span>Malvi</span>
+        <span (click)="scrollToSection('home')" style="cursor: pointer;">Malvi</span>
         <span class="example-spacer"></span>
-        <span class="example-icon show-menu-icon" (click)="drawer.toggle()"
+        <span class="nav-icon show-menu-icon" (click)="drawer.toggle()"
           ><mat-icon>menu</mat-icon></span
         >
         <div class="hide-menu-items">
-          <span class="example-icon" *ngFor="let menu of menuList">{{menu.name}}</span>
+          <span class="nav-icon" *ngFor="let menu of menuList" (click)="scrollToSection(menu.id)">{{menu.name}}</span>
         </div>
       </mat-toolbar-row>
     </mat-toolbar>

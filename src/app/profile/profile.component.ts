@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 export interface Tile {
   color: string;
@@ -18,19 +19,52 @@ export class ProfileComponent {
   showFiller = false;
   menuList: any[] = [
     {
-      name: 'Home'
+      name: 'Home',
+      id: 'home',
     },
     {
-      name: 'About'
+      name: 'About',
+      id: 'about',
     },
     {
-      name: 'Services'
+      name: 'Services',
+      id: 'services',
     },
     {
-      name: 'Portfolio'
+      name: 'Portfolio',
+      id: 'portfolio',
     },
     {
-      name: 'Contact me'
-    }
-  ]
+      name: 'Contact me',
+      id: 'contact',
+    },
+  ];
+  @ViewChild('drawer') drawer!: MatSidenav;
+  @ViewChild('home') home!: ElementRef;
+  @ViewChild('about') about!: ElementRef;
+  @ViewChild('services') services!: ElementRef;
+  @ViewChild('portfolio') portfolio!: ElementRef;
+  @ViewChild('contact') contact!: ElementRef;
+
+  sectionMap: { [key: string]: ElementRef } = {};
+
+  ngAfterViewInit(){
+    this.sectionMap = {
+      home: this.home,
+      about: this.about,
+      services: this.services,
+      portfolio: this.portfolio,
+      contact: this.contact,
+    };
+
+  }
+  closeSideNav() {
+    this.drawer.close();
+  }
+
+  scrollToDiv(section: string): void {
+    const targetElement = this.sectionMap[section];
+    targetElement.nativeElement.scrollIntoView({ behavior: 'smooth' });
+    this.closeSideNav()
+  }
 }

@@ -1,11 +1,17 @@
 @import '../../styles.scss';
 
+
+
+    .mat-drawer-content {
+        height: 600px !important;
+    }
+
 .profile-sidenav {
     padding: 20px;
     background-color: #575a8f;
 }
 
-.example-icon {
+.nav-icon {
     margin: 0 14px;
     font-size: medium;
     cursor: pointer;
@@ -67,8 +73,8 @@
     transition: all, 0.3s;
     font-family: 'Poppins', sans-serif;
     background: transparent;
-    margin-top: 15px;
-    padding: 0 15px;
+    // margin-top: 15px;
+    padding: 15px 15px 0 15px;
 }
 
 .header .header-content {

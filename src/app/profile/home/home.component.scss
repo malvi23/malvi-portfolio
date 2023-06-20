@@ -1,1 +1,14 @@
 @import '../profile.component.scss';
+
+.transparent-navbar {
+    .mat-toolbar.mat-primary {
+        background: transparent !important;
+    }
+}
+
+.white-navbar {
+    .mat-toolbar.mat-primary {
+        background: white !important;
+        color: #6c757d !important;
+    }
+}

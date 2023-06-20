@@ -8,6 +8,7 @@
 html,
 body {
     height: 100%;
+    margin: unset;
 }
 
 *,
@@ -34,7 +35,13 @@ $theme-color: darkslateblue;
         border-radius: 9px;
     }
 
-    .mat-toolbar.mat-primary {
-        background: transparent !important;
+    .mat-drawer {
+        position: fixed;
+        overflow-y: hidden;
     }
+
+    .mdc-list-item__content {
+        cursor: pointer;
+    }
+
 }
