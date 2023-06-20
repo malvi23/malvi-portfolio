@@ -25,4 +25,8 @@ $theme-color: darkslateblue;
     .mat-mdc-raised-button {
         border-radius: 9px;
     }
+
+    .mat-toolbar.mat-primary{
+        background: transparent !important;
+    }
 }

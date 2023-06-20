@@ -1,11 +1,2 @@
 @import '../../../styles.scss';
-
-.section-title {
-    font-size: 30px;
-    font-weight: bold;
-    color: $theme-color;
-}
-
-.container {
-    color: #8b8b8b;
-}
+@import '../profile.component.scss';
