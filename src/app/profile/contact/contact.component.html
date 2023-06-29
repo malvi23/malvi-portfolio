@@ -4,19 +4,23 @@
       <!-- <p class="section-subtitle">How can you communicate?</p> -->
       <h6 class="section-title mb-5">Contact Me</h6>
     </div>
-    <form class="contact-form" style="display: flex; flex-direction: column">
+    <form
+      class="contact-form"
+      [formGroup]="sendMessageForm"
+      (ngSubmit)="sendMail()"
+    >
       <table class="contact-full-width" cellspacing="0">
         <tr>
           <td>
             <mat-form-field class="contact-full-width">
               <mat-label>Your Name</mat-label>
-              <input matInput />
+              <input matInput id="name" formControlName="name" required />
             </mat-form-field>
           </td>
           <td>
             <mat-form-field class="contact-full-width">
               <mat-label>Email</mat-label>
-              <input matInput />
+              <input matInput id="email" formControlName="email" required />
             </mat-form-field>
           </td>
         </tr>
@@ -25,7 +29,7 @@
       <p>
         <mat-form-field class="contact-full-width">
           <mat-label>Message</mat-label>
-          <textarea matInput placeholder="Ex. 100 Main St"></textarea>
+          <textarea matInput placeholder="Ex. 100 Main St" id="message" formControlName="message" required></textarea>
         </mat-form-field>
       </p>
       <div class="contact-btn">
@@ -33,9 +37,9 @@
           type="submit"
           mat-raised-button
           class="btn-rounded mt-4"
-          color="primary"
+          color="primary" [disabled]="sendMessageForm.invalid || submitBtnText == 'Sending...'"
         >
-          Send Message
+          {{submitBtnText}}
         </button>
       </div>
     </form>

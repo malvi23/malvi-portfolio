@@ -10,6 +10,8 @@ import { ServicesComponent } from './services/services.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProjectDetailsComponent } from './portfolio/project-details/project-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -26,6 +28,8 @@ import { ProjectDetailsComponent } from './portfolio/project-details/project-det
     CommonModule,
     ProfileRoutingModule,
     MaterialModule,
+    ReactiveFormsModule,
+    FormsModule,
   ]
 })
 export class ProfileModule { }
